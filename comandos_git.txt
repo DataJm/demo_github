@@ -1,0 +1,5 @@
+Clonar el repositorio
+$ git clone URL
+
+Revisar los cambios en el repositorio
+$ git status
