@@ -31,3 +31,35 @@ $ git commit -m 'dev: desarrollo de primer codigo'
 Ahora si estamos listos para subir todos los cambios al repositorio
 $ git push
 
+# Entornos virtuales de python
+
+Son sandbox que nos ayudan a controlar las dependencias de un proyecto de Python
+
+#### Crear un entorno virtual llamado 'demo'
+`python -m venv demo`
+
+Una vez que creamos el entorno virtual, ahora necesitamos activarlo
+(es decir, dejar de trabajar con nuestro 'Python global' y empezar
+a trabajar con el Python local que acabamos de crear para este proyecto)
+
+#### En windows, Mac, Linux
+`source demo/Scripts/activate`
+
+#### Verificar los paquetes instalados con pip
+`pip list`
+
+A partir de este momento ya tengo una version de python dedicada a mi proyecto.
+Puedo instalar las dependencias con :
+`pip install sqlalchemy`
+
+Y para generar el archivo con todas las dependencias:
+`pip freeze > requirements.txt`
+
+# CUIDADO
+Definitivamente NO QUEREMOS subir a nuestro repositorio
+toda una copia de Python (la carpeta demo).
+
+Asi que vamos a agregarla a `.gitignore`
+
+.gitignore
+`demo/`
